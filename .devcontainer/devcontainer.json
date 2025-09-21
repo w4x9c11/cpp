@@ -1,0 +1,22 @@
+{
+    "name": "C++ Xmake Clangd Dev",
+    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+                "C_Cpp.default.intelliSenseMode": "linux-clang-x64"
+            },
+            "extensions": [
+                "xmake-io.xmake-vscode",
+                "llvm-vs-code-extensions.vscode-clangd"
+            ]
+        }
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y clangd cmake && curl -fsSL https://xmake.io/shget.text | bash && xmake --version && clangd --version && cmake --version",
+    "forwardPorts": [
+        8080,
+        3000
+    ],
+    "remoteUser": "vscode"
+}

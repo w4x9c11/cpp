@@ -1,0 +1,5 @@
+{
+    // "cmake.cmakePath": "/usr/bin/cmake",
+    "xmake.xmakePath": "/usr/bin/xmake",
+    "clangd.path": "/usr/local/bin/clangd",
+}
